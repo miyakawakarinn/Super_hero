@@ -45,7 +45,7 @@ void MainScene::Initialize()
 	goblin_.Initialize();
 	orthros_.Initialize();
 	witch_.Initialize();
-	effect_.Initialize(Math::Vector2(710.0f, -83.0f));
+	effect_.Initialize(Math::Vector2(710.0f, -300.0f));
 }
 
 // releasing resources required for termination.
