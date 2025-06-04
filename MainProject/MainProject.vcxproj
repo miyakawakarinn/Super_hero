@@ -110,7 +110,6 @@
     <ClInclude Include="Classes\Demon.h" />
     <ClInclude Include="Classes\Effect.h" />
     <ClInclude Include="Classes\Goblin.h" />
-    <ClInclude Include="Classes\Griffin.h" />
     <ClInclude Include="Classes\Orthrus.h" />
     <ClInclude Include="Classes\Player.h" />
     <ClInclude Include="Classes\ICollider.h" />
@@ -140,7 +139,6 @@
     <ClCompile Include="Classes\Demon.cpp" />
     <ClCompile Include="Classes\Effect.cpp" />
     <ClCompile Include="Classes\Goblin.cpp" />
-    <ClCompile Include="Classes\Griffin.cpp" />
     <ClCompile Include="Classes\Orthrus.cpp" />
     <ClCompile Include="Classes\Player.cpp" />
     <ClCompile Include="Classes\Witch.cpp" />

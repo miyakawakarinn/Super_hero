@@ -65,6 +65,5 @@ void MainScene::Update(float deltaTime)
 	witch_.Update();
 	effect_.Update();
 
-
 	Scene::Update(deltaTime);
 }

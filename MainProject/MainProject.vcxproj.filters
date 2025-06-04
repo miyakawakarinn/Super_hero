@@ -100,9 +100,6 @@
     <ClInclude Include="Classes\Orthrus.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Griffin.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Demon.h">
       <Filter>Classes</Filter>
     </ClInclude>
@@ -157,9 +154,6 @@
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Orthrus.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Griffin.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Demon.cpp">

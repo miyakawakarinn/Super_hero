@@ -32,4 +32,5 @@ private:
 	Orthrus orthros_;
 	Witch witch_;
 	Effect effect_;
+
 };

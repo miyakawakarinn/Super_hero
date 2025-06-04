@@ -7,6 +7,27 @@
 
 using namespace HE;
 
+
+void Player::OnCollision()
+{
+    sprite_.params.pos = Math::Vector2(
+        (RenderingPath->GetLogicalWidth() - sprite_.params.siz.x) / 2.0f,
+        RenderingPath->GetLogicalHeight() - sprite_.params.siz.y
+    );
+}
+
+
+Math::Rectangle Player::GetCollision()
+{
+    Math::Rectangle collision;
+    collision.x = (long)sprite_.params.pos.x;
+    collision.y = (long)sprite_.params.pos.y;
+    collision.width = (long)sprite_.params.siz.x;
+    collision.height = (long)sprite_.params.siz.y;
+
+    return collision;
+}
+
 void Player::Load()
 {
     sprite_ = Sprite("Player.png");
