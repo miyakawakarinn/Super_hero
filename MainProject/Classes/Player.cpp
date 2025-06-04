@@ -4,6 +4,7 @@
 //
 
 #include "Player.h"
+#include "Effect.h"
 
 using namespace HE;
 
@@ -35,13 +36,14 @@ void Player::Load()
 }
 
 
-void Player::Initialize()
+void Player::Initialize(Effect& effect)
 {
     sprite_.params.siz = Math::Vector2(200.0f, 200.0f);
     sprite_.params.pos = Math::Vector2(590.0f, 520.0f);
     //sprite_.params.enableDrawRect(Rectf(
        // 0, 0, sprite_.params.siz.x, sprite_.params.siz.y
     //));
+    effect_ = &effect;
 }
 
 
@@ -54,6 +56,9 @@ void Player::Update()
 
     if (InputSystem.Keyboard.isPressed.Left)
         sprite_.params.pos.x += -300.0f * Time.deltaTime;
+
+    if (InputSystem.Keyboard.wasPressedThisFrame.Space)
+        effect_->Initialize(Math::Vector2(sprite_.params.pos.x, sprite_.params.pos.y));
 
     //”ÍˆÍŠO‚©’²‚×‚é
 

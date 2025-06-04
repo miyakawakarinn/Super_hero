@@ -5,11 +5,12 @@
 class Effect {
 public:
     void Load();
-    void Initialize();
+    void Initialize(HE::Math::Vector2 initial);
     void Update();
+
+    HE::Math::Rectangle GetCollision();
     void OnCollision();
 
 private:
     HE::Sprite sprite_;
-    HE::Math::Rectangle GetCollision();
 };

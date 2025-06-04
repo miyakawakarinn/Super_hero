@@ -40,12 +40,12 @@ void MainScene::Load()
 void MainScene::Initialize()
 {
 	bg_.Initialize();
-	player_.Initialize();
+	player_.Initialize(effect_);
 	demon_.Initialize();
 	goblin_.Initialize();
 	orthros_.Initialize();
 	witch_.Initialize();
-	effect_.Initialize();
+	effect_.Initialize(Math::Vector2(710.0f, -83.0f));
 }
 
 // releasing resources required for termination.
@@ -64,6 +64,11 @@ void MainScene::Update(float deltaTime)
 	orthros_.Update();
 	witch_.Update();
 	effect_.Update();
+
+
+	// è’ìÀîªíË
+
+
 
 	Scene::Update(deltaTime);
 }

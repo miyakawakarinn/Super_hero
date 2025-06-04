@@ -8,8 +8,8 @@ public:
     void Initialize();
     void Update();
     void OnCollision();
+    HE::Math::Rectangle GetCollision();
 
 private:
     HE::Sprite sprite_;
-    HE::Math::Rectangle GetCollision();
 };

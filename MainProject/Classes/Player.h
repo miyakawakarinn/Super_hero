@@ -3,15 +3,18 @@
 
 #include "../HuEngine.h"
 
+class Effect;
+
 class Player {
 public:
     void Load();
-    void Initialize();
+    void Initialize(Effect& effect);
     void Update();
+
+    HE::Math::Rectangle GetCollision();
     void OnCollision();
 
 private:
-
     HE::Sprite sprite_;
-    HE::Math::Rectangle GetCollision();
+    Effect* effect_;
 };
