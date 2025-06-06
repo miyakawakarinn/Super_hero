@@ -51,3 +51,6 @@ void Demon::Update()
     if (sprite_.params.pos.x >= 1280.0f)
         sprite_.params.pos.x = -140.0f;
 }
+
+
+

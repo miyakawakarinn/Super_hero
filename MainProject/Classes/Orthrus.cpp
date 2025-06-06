@@ -54,3 +54,4 @@ void Orthrus::Update()
         sprite_.params.pos.y = -120.0f;
     }
     }
+//3.OnCollisionŠÖ”‚ÌÀ‘•Effect.cpp‚©‚ç

@@ -28,3 +28,15 @@ void Effect::Update()
             sprite_.params.pos.y = -300.0f;
     
 }
+
+
+Math::Rectangle Effect::GetCollision()
+{
+    Math::Rectangle collision;
+    collision.x = (long)sprite_.params.pos.x;
+    collision.y = (long)sprite_.params.pos.y;
+    collision.width = (long)sprite_.params.siz.x;
+    collision.height = (long)sprite_.params.siz.y;
+
+    return collision;
+}

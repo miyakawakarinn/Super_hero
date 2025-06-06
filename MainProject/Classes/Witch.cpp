@@ -48,3 +48,4 @@ void Witch::Update()
         sprite_.params.pos.x = -140.0f;
     }
 }
+

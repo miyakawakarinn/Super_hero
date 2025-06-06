@@ -50,3 +50,4 @@ void Goblin::Update()
     if (sprite_.params.pos.x <= -140.0f)
         sprite_.params.pos.x = 1420.0f;
 }
+
