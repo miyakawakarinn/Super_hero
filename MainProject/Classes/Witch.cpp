@@ -2,13 +2,6 @@
 
 using namespace HE;
 
-
-void Witch::OnCollision()
-{
-
-}
-
-
 Math::Rectangle Witch::GetCollision()
 {
     Math::Rectangle collision;
@@ -47,5 +40,11 @@ void Witch::Update()
         sprite_.params.pos.x = Random::GetRandom(0.0f, 1280.0f - sprite_.params.siz.x);
         sprite_.params.pos.x = -140.0f;
     }
+}
+
+
+void Witch::OnCollision()
+{
+    sprite_.params.pos = Math::Vector2(-300.0f, 350.0f);
 }
 

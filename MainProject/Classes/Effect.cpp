@@ -8,6 +8,7 @@ void Effect::Load()
 
     sprite_ = Sprite("effect.png");
     RenderingPath->AddSprite(&sprite_, -50);
+    RenderingPath->AddSprite(&collision_sprite_, 1);
 
 }
 
@@ -18,6 +19,10 @@ void Effect::Initialize(Math::Vector2 initial)
         sprite_.params.enableDrawRect(Rectf(
             0, 0, sprite_.params.siz.x, sprite_.params.siz.y
         ));
+
+        // 衝突範囲の表示設定
+        collision_sprite_.params.color = Color(255, 0, 0);  // 色
+        collision_sprite_.params.opacity = 0.5f;              // 透明度
     
 }
 
@@ -38,5 +43,18 @@ Math::Rectangle Effect::GetCollision()
     collision.width = (long)sprite_.params.siz.x;
     collision.height = (long)sprite_.params.siz.y;
 
+
+    // 衝突範囲表示設定
+    collision_sprite_.params.pos.x = (float)collision.x;
+    collision_sprite_.params.pos.y = (float)collision.y;
+    collision_sprite_.params.siz.x = (float)collision.width;
+    collision_sprite_.params.siz.y = (float)collision.height;
+
     return collision;
+}
+
+
+void Effect::OnCollision()
+{
+
 }

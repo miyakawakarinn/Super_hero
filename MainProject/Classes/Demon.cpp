@@ -8,12 +8,6 @@
 using namespace HE;
 
 
-void Demon::OnCollision()
-{
-
-}
-
-
 Math::Rectangle Demon::GetCollision()
 {
     Math::Rectangle collision;
@@ -52,5 +46,10 @@ void Demon::Update()
         sprite_.params.pos.x = -140.0f;
 }
 
+
+void Demon::OnCollision()
+{
+    sprite_.params.pos = Math::Vector2(-140.0f, 0.0f);
+}
 
 

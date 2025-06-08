@@ -6,13 +6,6 @@
 
 using namespace HE;
 
-
-void Goblin::OnCollision()
-{
-
-}
-
-
 Math::Rectangle Goblin::GetCollision()
 {
     Math::Rectangle collision;
@@ -51,3 +44,8 @@ void Goblin::Update()
         sprite_.params.pos.x = 1420.0f;
 }
 
+
+void Goblin::OnCollision()
+{
+    sprite_.params.pos = Math::Vector2(-140.0f, 200.0f);
+}

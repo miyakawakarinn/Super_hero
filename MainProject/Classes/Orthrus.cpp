@@ -10,7 +10,8 @@ using namespace HE;
 
 void Orthrus::OnCollision()
 {
-
+    sprite_.params.pos.x = Random::GetRandom(0.0f, 1280.0f - sprite_.params.siz.x);
+    sprite_.params.pos.y = (-120.0f);
 }
 
 
@@ -54,4 +55,3 @@ void Orthrus::Update()
         sprite_.params.pos.y = -120.0f;
     }
     }
-//3.OnCollisionŠÖ”‚ÌÀ‘•Effect.cpp‚©‚ç

@@ -8,6 +8,7 @@
 #include "../Classes/Orthrus.h"
 #include "../Classes/Witch.h"
 #include "../Classes/Effect.h"
+#include "../Classes/PlayerData.h"
 
 class MainScene : public HE::Scene
 {
@@ -29,8 +30,9 @@ private:
 	Player player_;
 	Demon demon_;
 	Goblin goblin_;
-	Orthrus orthros_;
+	Orthrus orthrus_;
 	Witch witch_;
 	Effect effect_;
+	PlayerData player_data_;
 
 };
