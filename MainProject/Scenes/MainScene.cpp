@@ -32,7 +32,7 @@ void MainScene::Load()
 	orthrus_.Load();
 	witch_.Load();
 	effect_.Load();
-	//player_data_.Load();
+	player_data_.Load();
 
 	Scene::Load();
 }
@@ -43,11 +43,12 @@ void MainScene::Initialize()
 	bg_.Initialize();
 	player_.Initialize(effect_);
 	demon_.Initialize();
-	goblin_.Initialize();
+	goblin_.Initialize(Math::Vector2(690.0f, 260.0f), 150.0f, 150.0f);
 	orthrus_.Initialize();
 	witch_.Initialize(Math::Vector2(-140.0f, 550.0f), 350.0f, -30.0f);
 	effect_.Initialize(Math::Vector2(-140.0f, -300.0f));
-	//player_data_.Initialize();
+	player_data_.Initialize();
+
 }
 
 // releasing resources required for termination.
@@ -94,3 +95,4 @@ void MainScene::Update(float deltaTime)
 
 	Scene::Update(deltaTime);
 }
+//UIÇÃçXêVÇ©ÇÁ

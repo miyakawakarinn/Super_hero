@@ -109,8 +109,8 @@
     <ClInclude Include="Classes\Effect.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Scenes\PlayerData.h">
-      <Filter>Scenes</Filter>
+    <ClInclude Include="Classes\PlayerData.h">
+      <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -168,8 +168,8 @@
     <ClCompile Include="Classes\Effect.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Scenes\PlayerData.cpp">
-      <Filter>Scenes</Filter>
+    <ClCompile Include="Classes\PlayerData.cpp">
+      <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
