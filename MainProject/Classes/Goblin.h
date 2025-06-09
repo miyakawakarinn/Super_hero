@@ -12,5 +12,10 @@ public:
     HE::Math::Rectangle GetCollision();
 
 private:
+
+   // HE::Math::Vector2
+    //float     theta_;
+    float     radius_;
+    float     speed_;
     HE::Sprite sprite_;
 };

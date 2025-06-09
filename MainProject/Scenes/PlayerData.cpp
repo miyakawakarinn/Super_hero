@@ -9,8 +9,8 @@ using namespace HE;
 
 void PlayerData::Load()
 {
-    score_headline_.params.style = Font::AddFontStyle("ロゴたいぷゴシック.ttf");
-    score_text_.params.style = Font::AddFontStyle("ロゴたいぷゴシック.ttf");
+    score_headline_.params.style = Font::AddFontStyle("Senobi-Gothic-Bold.ttf");
+    score_text_.params.style = Font::AddFontStyle("Senobi-Gothic-Bold.ttf");
     RenderingPath->AddFont(&score_headline_, 1000);
     RenderingPath->AddFont(&score_text_, 1000);
 }
@@ -33,4 +33,3 @@ void PlayerData::Initialize()
     score_text_.params.size = 32;
     score_text_.params.color = Color(255, 0, 0);
 }
-//UIの表示から（文字出ない）

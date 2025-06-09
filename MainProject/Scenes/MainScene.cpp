@@ -32,7 +32,7 @@ void MainScene::Load()
 	orthrus_.Load();
 	witch_.Load();
 	effect_.Load();
-	player_data_.Load();
+	//player_data_.Load();
 
 	Scene::Load();
 }
@@ -45,9 +45,9 @@ void MainScene::Initialize()
 	demon_.Initialize();
 	goblin_.Initialize();
 	orthrus_.Initialize();
-	witch_.Initialize();
-	effect_.Initialize(Math::Vector2(710.0f, -300.0f));
-	player_data_.Initialize();
+	witch_.Initialize(Math::Vector2(-140.0f, 550.0f), 350.0f, -30.0f);
+	effect_.Initialize(Math::Vector2(-140.0f, -300.0f));
+	//player_data_.Initialize();
 }
 
 // releasing resources required for termination.
