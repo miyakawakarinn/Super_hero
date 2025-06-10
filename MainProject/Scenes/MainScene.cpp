@@ -43,7 +43,7 @@ void MainScene::Initialize()
 	bg_.Initialize();
 	player_.Initialize(effect_);
 	demon_.Initialize();
-	goblin_.Initialize(Math::Vector2(690.0f, 260.0f), 150.0f, 150.0f);
+	goblin_.Initialize(Math::Vector2(690.0f,220.0f), 150.0f, 150.0f);
 	orthrus_.Initialize();
 	witch_.Initialize(Math::Vector2(-140.0f, 550.0f), 350.0f, -30.0f);
 	effect_.Initialize(Math::Vector2(-140.0f, -300.0f));
@@ -79,20 +79,37 @@ void MainScene::Update(float deltaTime)
 	if (demon_collision.Intersects(effect_collision)) {
 		demon_.OnCollision();
 		effect_.OnCollision();
+		// クリア判定
+		int score = player_data_.GetScore();
+		player_data_.SetScore(player_data_.GetScore() + 1);
 	}
 	if (orthrus_collision.Intersects(effect_collision)) {
 		orthrus_.OnCollision();
 		effect_.OnCollision();
+		// クリア判定
+		int score = player_data_.GetScore();
+		player_data_.SetScore(player_data_.GetScore() + 1);
 	}
 	if (goblin_collision.Intersects(effect_collision)) {
 		goblin_.OnCollision();
 		effect_.OnCollision();
+		// クリア判定
+		int score = player_data_.GetScore();
+		player_data_.SetScore(player_data_.GetScore() + 1);
+		//goblin_.SetInitialPosition();
 	}
 	if (witch_collision.Intersects(effect_collision)) {
 		witch_.OnCollision();
 		effect_.OnCollision();
+		// クリア判定
+		int score = player_data_.GetScore();
+		player_data_.SetScore(player_data_.GetScore() + 1);
 	}
+
+	if (InputSystem.Keyboard.wasPressedThisFrame.Enter)
+		SceneManager.SetNextScene(NextScene::GameOverScene);
+
 
 	Scene::Update(deltaTime);
 }
-//UIの更新から
+

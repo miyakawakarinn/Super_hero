@@ -33,3 +33,10 @@ void PlayerData::Initialize()
     score_text_.params.size = 40;
     score_text_.params.color = Color(255, 0, 0);
 }
+
+
+void PlayerData::SetScore(int score)
+{
+    score_ = score;
+    score_text_.SetText(std::to_string(score_));
+}

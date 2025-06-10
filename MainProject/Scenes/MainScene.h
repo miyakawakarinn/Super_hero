@@ -9,6 +9,7 @@
 #include "../Classes/Witch.h"
 #include "../Classes/Effect.h"
 #include "../Classes/PlayerData.h"
+#include "../Scenes/GameOverScene.h"
 
 class MainScene : public HE::Scene
 {
@@ -34,5 +35,8 @@ private:
 	Witch witch_;
 	Effect effect_;
 	PlayerData player_data_;
+	GameOverScene GameoverScene_;
+
+	HE::Sprite sprite_;
 
 };

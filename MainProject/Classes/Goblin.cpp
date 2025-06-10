@@ -1,5 +1,5 @@
 //
-// Redcar.cpp
+// Goblin.cpp
 //
 
 #include "Goblin.h"
@@ -28,7 +28,7 @@ void Goblin::Load()
 
 void Goblin::Initialize(Math::Vector2 initial, float radius, float speed)
 {
-    sprite_.params.pos = Math::Vector2(550.0f, 220.0f);
+    sprite_.params.pos = Math::Vector2(-200.0f, -220.0f);
     sprite_.params.siz = Math::Vector2(140.0f, 140.0f);
     sprite_.params.pivot = Math::Vector2(0.5f, 0.5f);
     sprite_.params.enableDrawRect(Rectf(
@@ -40,6 +40,7 @@ void Goblin::Initialize(Math::Vector2 initial, float radius, float speed)
     radius_ = radius;
     speed_ = speed;
 
+   // SetInitialPosition();
 
 }
 
@@ -59,5 +60,6 @@ void Goblin::Update()
 
 void Goblin::OnCollision()
 {
-    sprite_.params.pos = Math::Vector2(-140.0f, 200.0f);
+    center_ = Math::Vector2(-14000.0f, 20000.0f);
+    
 }

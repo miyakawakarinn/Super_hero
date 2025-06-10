@@ -2,6 +2,7 @@
 
 #include "SceneManagement.h"
 #include "Scenes/MainScene.h"
+#include "Scenes/GameOverScene.h"
 
 void SceneManagement::Initialize()
 {
@@ -26,7 +27,12 @@ std::unique_ptr<HE::Scene> SceneManagement::CreateScene(const NextScene nextScen
 	std::unique_ptr<HE::Scene> scene;
 	switch (nextScene) {
 	case NextScene::MainScene:	scene = std::make_unique<MainScene>();	break;
+
+	case NextScene::GameOverScene:
+		scene = std::make_unique<GameOverScene>();
+		break;
 	}
+
 	return scene;
 }
 
