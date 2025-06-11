@@ -7,7 +7,7 @@ enum class NextScene : int {
 	MainScene,
 	TitleScene,
 	GameOverScene,
-	StartScene = MainScene
+	StartScene = TitleScene
 };
 
 class SceneManagement : public HE::Application

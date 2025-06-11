@@ -25,7 +25,7 @@ void TitleScene::ResizeLayout()
 void TitleScene::Load()
 {
     sprite_ = Sprite("title.png");
-    RenderingPath->AddSprite(&sprite_, 0);
+    RenderingPath->AddSprite(&sprite_, 100);
 
 
     Scene::Load();

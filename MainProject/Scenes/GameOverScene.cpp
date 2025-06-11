@@ -48,8 +48,8 @@ void GameOverScene::Terminate()
 // updates the scene.
 void GameOverScene::Update(float deltaTime)
 {
-    if (InputSystem.Keyboard.wasPressedThisFrame.W)
-        SceneManager.SetNextScene(NextScene::MainScene);
+    if (InputSystem.Keyboard.wasPressedThisFrame.Enter)
+        SceneManager.SetNextScene(NextScene::TitleScene);
     //SceneManager.SetNextScene(NextScene::GameOverScene, 2.0f, Color(255, 0, 0));
 
 

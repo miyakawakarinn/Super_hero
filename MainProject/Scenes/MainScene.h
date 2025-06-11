@@ -10,6 +10,7 @@
 #include "../Classes/Effect.h"
 #include "../Classes/PlayerData.h"
 #include "../Scenes/GameOverScene.h"
+#include "../Scenes/TitleScene.h"
 
 class MainScene : public HE::Scene
 {
@@ -36,6 +37,7 @@ private:
 	Effect effect_;
 	PlayerData player_data_;
 	GameOverScene GameoverScene_;
+	TitleScene Titlescene_;
 
 	HE::Sprite sprite_;
 
