@@ -3,6 +3,7 @@
 #include "SceneManagement.h"
 #include "Scenes/MainScene.h"
 #include "Scenes/GameOverScene.h"
+#include "Scenes/TitleScene.h"
 
 void SceneManagement::Initialize()
 {

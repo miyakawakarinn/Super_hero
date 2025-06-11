@@ -5,6 +5,7 @@
 
 enum class NextScene : int {
 	MainScene,
+	TitleScene,
 	GameOverScene,
 	StartScene = MainScene
 };
