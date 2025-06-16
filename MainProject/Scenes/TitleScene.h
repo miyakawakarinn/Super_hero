@@ -18,4 +18,5 @@ public:
 
 private:
     HE::Sprite sprite_;
+    HE::Sound bgm_;
 };
