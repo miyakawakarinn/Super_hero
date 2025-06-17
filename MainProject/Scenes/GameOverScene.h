@@ -19,4 +19,5 @@ public:
 
 private:
     HE::Sprite sprite_;
+    HE::SpriteFont result_headline_;
 };

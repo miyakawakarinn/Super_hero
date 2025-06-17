@@ -49,6 +49,7 @@ void MainScene::Initialize()
 	effect_.Initialize(Math::Vector2(-140.0f, -300.0f));
 	player_data_.Initialize();
 
+
 }
 
 // releasing resources required for termination.

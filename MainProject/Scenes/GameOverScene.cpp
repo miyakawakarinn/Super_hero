@@ -27,6 +27,7 @@ void GameOverScene::Load()
 {
     sprite_ = Sprite("GameoverScene.png");
     RenderingPath->AddSprite(&sprite_, -100);
+    RenderingPath->AddFont(&result_headline_, 1000);
 
     Scene::Load();
 }
@@ -37,6 +38,13 @@ void GameOverScene::Initialize()
     sprite_.params.siz = sprite_.GetTextureSize();
     sprite_.params.siz.x = RenderingPath->GetLogicalWidth();
     sprite_.params.pos = Math::Vector2(0.0);
+
+    // スコア見出し(1-UP)
+    result_headline_.SetText(L"Result");
+    result_headline_.params.posX = 800.0f;
+    result_headline_.params.posY = 0.0f;
+    result_headline_.params.size = 100;
+    result_headline_.params.color = Color(0,0,0);    // 赤, 緑, 青(0-255)
 }
 
 // releasing resources required for termination.

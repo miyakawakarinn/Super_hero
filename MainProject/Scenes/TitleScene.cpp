@@ -26,8 +26,7 @@ void TitleScene::Load()
 {
     sprite_ = Sprite("title.png");
     RenderingPath->AddSprite(&sprite_, 100);
-
-    bgm_ = Sound("TitleBGM.mp3", Sound::LoopCount::BGM);
+    bgm_ = Sound("TitleBGM.wav", Sound::LoopCount::BGM);
     bgm_.Play();
 
 

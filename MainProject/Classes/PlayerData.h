@@ -14,6 +14,9 @@ public:
 
 private:
     int score_;
+    float time_;
+
     HE::SpriteFont score_headline_;
     HE::SpriteFont score_text_;
+    HE::SpriteFont time_text_;
 };
