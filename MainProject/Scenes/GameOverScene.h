@@ -2,6 +2,7 @@
 #pragma once
 
 #include "../HuEngine.h"
+#include "DontDestroyOnLoad.h"
 
 class GameOverScene : public HE::Scene
 {
@@ -20,4 +21,8 @@ public:
 private:
     HE::Sprite sprite_;
     HE::SpriteFont result_headline_;
+    HE::SpriteFont titleback_headline_;
+    HE::SpriteFont score_;
+    HE::SpriteFont point_;
+    HE::SpriteFont text_;
 };

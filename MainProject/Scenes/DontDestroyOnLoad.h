@@ -34,7 +34,7 @@ private:
 
 
 public:
-
+	int score_;
 
 
 };

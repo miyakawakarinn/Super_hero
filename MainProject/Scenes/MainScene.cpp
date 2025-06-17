@@ -3,6 +3,7 @@
 //
 
 #include "MainScene.h"
+#include "DontDestroyOnLoad.h"
 
 using namespace HE;
 
@@ -107,9 +108,10 @@ void MainScene::Update(float deltaTime)
 		player_data_.SetScore(player_data_.GetScore() + 1);
 	}
 
-	if (InputSystem.Keyboard.wasPressedThisFrame.Enter)
+	if (InputSystem.Keyboard.wasPressedThisFrame.Enter) {
+		DontDestroy.score_ = player_data_.GetScore();
 		SceneManager.SetNextScene(NextScene::GameOverScene);
-
+	}
 
 	Scene::Update(deltaTime);
 }

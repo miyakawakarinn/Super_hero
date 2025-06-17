@@ -4,6 +4,7 @@
 //
 
 #include "GameOverScene.h"
+#include "DontDestroyOnLoad.h"
 
 using namespace HE;
 
@@ -25,9 +26,14 @@ void GameOverScene::ResizeLayout()
 // load resources.
 void GameOverScene::Load()
 {
+
     sprite_ = Sprite("GameoverScene.png");
     RenderingPath->AddSprite(&sprite_, -100);
     RenderingPath->AddFont(&result_headline_, 1000);
+    RenderingPath->AddFont(&titleback_headline_, 1000);
+    RenderingPath->AddFont(&score_, 1000);
+    RenderingPath->AddFont(&point_, 1000);
+    RenderingPath->AddFont(&text_, 1000);
 
     Scene::Load();
 }
@@ -41,17 +47,38 @@ void GameOverScene::Initialize()
 
     //Result
     result_headline_.SetText(L"Result");
-    result_headline_.params.posX = 800.0f;
+    result_headline_.params.posX = 470.0f;
     result_headline_.params.posY = 0.0f;
     result_headline_.params.size = 100;
-    result_headline_.params.color = Color(0,0,0);    // 赤, 緑, 青(0-255)
+    result_headline_.params.color = Color(255, 69, 0);    // 赤, 緑, 青(0-255)
 
     //Enterでタイトルに戻る
-    //result_headline_.SetText(L"Result");
-    //result_headline_.params.posX = 800.0f;
-    //result_headline_.params.posY = 0.0f;
-    //result_headline_.params.size = 100;
-    //result_headline_.params.color = Color(0, 0, 0);    // 赤, 緑, 青(0-255)
+    titleback_headline_.SetText(L"Enterでタイトルに戻る");
+    titleback_headline_.params.posX = 470.0f;
+    titleback_headline_.params.posY = 600.0f;
+    titleback_headline_.params.size = 100;
+    titleback_headline_.params.color = Color(0, 0, 0);    // 赤, 緑, 青(0-255)
+
+    //獲得点数
+    score_.SetText(std::to_string(DontDestroy.score_));
+    score_.params.posX = 400.0f;
+    score_.params.posY = 310.0f;
+    score_.params.size = 200;
+    score_.params.color = Color(255, 69, 0);
+
+    //下の線
+    point_.SetText(L"体！");
+    point_.params.posX = 900.0f;
+    point_.params.posY = 310.0f;
+    point_.params.size = 200;
+    point_.params.color = Color(0, 0, 0);    // 赤, 緑, 青(0-255)
+
+    //あなたが倒したモンスターの数は...
+    text_.SetText(L"あなたが倒したモンスターの数は..");
+    text_.params.posX = 40.0f;
+    text_.params.posY = 180.0f;
+    text_.params.size = 100;
+    text_.params.color = Color(0, 0, 0);    // 赤, 緑, 青(0-255)
 
 }
 
