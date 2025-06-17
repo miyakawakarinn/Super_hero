@@ -68,6 +68,7 @@ void MainScene::Update(float deltaTime)
 	goblin_.Update();
 	orthrus_.Update();
 	witch_.Update();
+
 	effect_.Update();
 
 

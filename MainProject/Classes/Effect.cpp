@@ -45,10 +45,10 @@ Math::Rectangle Effect::GetCollision()
 
 
     // Õ“Ë”ÍˆÍ•\¦İ’è
-    collision_sprite_.params.pos.x = (float)collision.x;
-    collision_sprite_.params.pos.y = (float)collision.y;
-    collision_sprite_.params.siz.x = (float)collision.width;
-    collision_sprite_.params.siz.y = (float)collision.height;
+    //collision_sprite_.params.pos.x = (float)collision.x;
+    //collision_sprite_.params.pos.y = (float)collision.y;
+    //collision_sprite_.params.siz.x = (float)collision.width;
+    //collision_sprite_.params.siz.y = (float)collision.height;
 
     return collision;
 }

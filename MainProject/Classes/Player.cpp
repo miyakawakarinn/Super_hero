@@ -44,6 +44,7 @@ void Player::Initialize(Effect& effect)
        // 0, 0, sprite_.params.siz.x, sprite_.params.siz.y
     //));
     effect_ = &effect;
+    se_ = Sound("sunder.wav", Sound::LoopCount::SE);
 }
 
 
@@ -51,15 +52,17 @@ void Player::Update()
 {
     //¶‰E
 
-    if (InputSystem.Keyboard.isPressed.Right)
+    if (InputSystem.Keyboard.isPressed.Right) {
         sprite_.params.pos.x += 300.0f * Time.deltaTime;
-
-    if (InputSystem.Keyboard.isPressed.Left)
+    }
+    if (InputSystem.Keyboard.isPressed.Left) {
         sprite_.params.pos.x += -300.0f * Time.deltaTime;
-
-    if (InputSystem.Keyboard.wasPressedThisFrame.Space)
+    }
+    if (InputSystem.Keyboard.wasPressedThisFrame.Space) {
         effect_->Initialize(Math::Vector2(sprite_.params.pos.x, sprite_.params.pos.y));
-
+        se_. Play();
+    }
+    
     //”ÍˆÍŠO‚©’²‚×‚é
 
     if (sprite_.params.pos.x < 0.0f)
