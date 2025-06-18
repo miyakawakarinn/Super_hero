@@ -8,6 +8,9 @@
 #include "../Classes/Orthrus.h"
 #include "../Classes/Witch.h"
 #include "../Classes/Effect.h"
+#include "../Classes/Rabbit.h"
+#include "../Classes/Slime.h"
+#include "../Classes/Rizard.h"
 #include "../Classes/PlayerData.h"
 
 
@@ -34,7 +37,13 @@ private:
 	Orthrus orthrus_;
 	Witch witch_;
 	Effect effect_;
+	Rabbit rabbit_;
 	PlayerData player_data_;
+	Slime slime_;
+	Rizard rizard_;
+	HE::Sound mainbgm_;
+
+	float time_;
 
 	HE::Sprite sprite_;
 

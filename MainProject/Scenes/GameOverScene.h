@@ -25,4 +25,6 @@ private:
     HE::SpriteFont score_;
     HE::SpriteFont point_;
     HE::SpriteFont text_;
+
+    HE::Sound result_;
 };

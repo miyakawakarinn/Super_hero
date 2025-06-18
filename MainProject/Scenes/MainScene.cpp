@@ -19,7 +19,6 @@ void MainScene::ResizeLayout()
 	Scene::ResizeLayout();
 
 
-
 }
 
 // load resources.
@@ -33,7 +32,13 @@ void MainScene::Load()
 	orthrus_.Load();
 	witch_.Load();
 	effect_.Load();
+	rabbit_.Load();
+	slime_.Load();
+	rizard_.Load();
 	player_data_.Load();
+
+
+	mainbgm_ = Sound("MainBGM.wav", Sound::LoopCount::BGM);
 
 	Scene::Load();
 }
@@ -48,8 +53,14 @@ void MainScene::Initialize()
 	orthrus_.Initialize();
 	witch_.Initialize(Math::Vector2(-140.0f, 550.0f), 350.0f, -30.0f);
 	effect_.Initialize(Math::Vector2(-140.0f, -300.0f));
+	rabbit_.Initialize();
+	slime_.Initialize();
+	rizard_.Initialize();
 	player_data_.Initialize();
 
+	time_ = 20.0f;
+
+	mainbgm_.Play();
 
 }
 
@@ -68,20 +79,25 @@ void MainScene::Update(float deltaTime)
 	goblin_.Update();
 	orthrus_.Update();
 	witch_.Update();
+	rabbit_.Update();
+	slime_.Update();
+	rizard_.Update();
 
 	effect_.Update();
 
-
 	// 衝突判定
-
 	Math::Rectangle demon_collision = demon_.GetCollision();
 	Math::Rectangle orthrus_collision = orthrus_.GetCollision();
 	Math::Rectangle goblin_collision = goblin_.GetCollision();
 	Math::Rectangle witch_collision = witch_.GetCollision();
+	Math::Rectangle rabbit_collision = rabbit_.GetCollision();
+	Math::Rectangle slime_collision = slime_.GetCollision();
+	Math::Rectangle rizard_collision = rizard_.GetCollision();
 	Math::Rectangle effect_collision = effect_.GetCollision();
 	if (demon_collision.Intersects(effect_collision)) {
 		demon_.OnCollision();
 		effect_.OnCollision();
+
 		// クリア判定
 		int score = player_data_.GetScore();
 		player_data_.SetScore(player_data_.GetScore() + 1);
@@ -108,12 +124,36 @@ void MainScene::Update(float deltaTime)
 		int score = player_data_.GetScore();
 		player_data_.SetScore(player_data_.GetScore() + 1);
 	}
+	if (rabbit_collision.Intersects(effect_collision)) {
+		rabbit_.OnCollision();
+		effect_.OnCollision();
+		// クリア判定
+		int score = player_data_.GetScore();
+		player_data_.SetScore(player_data_.GetScore() + 1);
+	}
+	if (slime_collision.Intersects(effect_collision)) {
+		slime_.OnCollision();
+		effect_.OnCollision();
+		// クリア判定
+		int score = player_data_.GetScore();
+		player_data_.SetScore(player_data_.GetScore() + 1);
+	}
+	if (rizard_collision.Intersects(effect_collision)) {
+		rizard_.OnCollision();
+		effect_.OnCollision();
+		// クリア判定
+		int score = player_data_.GetScore();
+		player_data_.SetScore(player_data_.GetScore() + 1);
+	}
 
-	if (InputSystem.Keyboard.wasPressedThisFrame.Enter) {
+	time_ -= deltaTime;
+
+	if (time_ <= 0) {
 		DontDestroy.score_ = player_data_.GetScore();
 		SceneManager.SetNextScene(NextScene::GameOverScene);
 	}
 
 	Scene::Update(deltaTime);
 }
+
 

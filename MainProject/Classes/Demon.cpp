@@ -1,8 +1,3 @@
-
-//
-// Redcar.cpp
-//
-
 #include "Demon.h"
 
 using namespace HE;
@@ -49,7 +44,7 @@ void Demon::Update()
 
 void Demon::OnCollision()
 {
-    sprite_.params.pos = Math::Vector2(-140.0f, 0.0f);
+    sprite_.params.pos = Math::Vector2(-300.0f, 0.0f);
 }
 
 

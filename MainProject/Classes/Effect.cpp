@@ -28,7 +28,7 @@ void Effect::Initialize(Math::Vector2 initial)
 
 void Effect::Update()
 {
-        sprite_.params.pos.y += -500.0f * Time.deltaTime;
+        sprite_.params.pos.y += -600.0f * Time.deltaTime;
         if (sprite_.params.pos.y < -83.0f)
             sprite_.params.pos.y = -3000.0f;
     

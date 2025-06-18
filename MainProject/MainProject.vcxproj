@@ -114,6 +114,9 @@
     <ClInclude Include="Classes\Player.h" />
     <ClInclude Include="Classes\ICollider.h" />
     <ClInclude Include="Classes\PlayerData.h" />
+    <ClInclude Include="Classes\Rabbit.h" />
+    <ClInclude Include="Classes\Rizard.h" />
+    <ClInclude Include="Classes\Slime.h" />
     <ClInclude Include="Classes\Witch.h" />
     <ClInclude Include="HEToolKit\cppcoro\cppcoro.h" />
     <ClInclude Include="HEToolKit\DirectXTK\Bezier.h" />
@@ -145,6 +148,9 @@
     <ClCompile Include="Classes\Orthrus.cpp" />
     <ClCompile Include="Classes\Player.cpp" />
     <ClCompile Include="Classes\PlayerData.cpp" />
+    <ClCompile Include="Classes\Rabbit.cpp" />
+    <ClCompile Include="Classes\Rizard.cpp" />
+    <ClCompile Include="Classes\Slime.cpp" />
     <ClCompile Include="Classes\Witch.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Keyboard.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Mouse.cpp" />

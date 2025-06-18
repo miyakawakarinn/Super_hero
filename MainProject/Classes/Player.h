@@ -14,8 +14,11 @@ public:
     HE::Math::Rectangle GetCollision();
     void OnCollision();
 
+
+
 private:
     HE::Sprite sprite_;
     HE::Sound se_;
     Effect* effect_;
+
 };

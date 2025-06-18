@@ -1,0 +1,52 @@
+#include "Rizard.h"
+
+using namespace HE;
+
+
+void Rizard::OnCollision()
+{
+    sprite_.params.pos.x = Random::GetRandom(0.0f, 1280.0f - sprite_.params.siz.x);
+    sprite_.params.pos.y = (-120.0f);
+}
+
+
+Math::Rectangle Rizard::GetCollision()
+{
+    Math::Rectangle collision;
+    collision.x = (long)sprite_.params.pos.x;
+    collision.y = (long)sprite_.params.pos.y;
+    collision.width = (long)sprite_.params.siz.x;
+    collision.height = (long)sprite_.params.siz.y;
+
+    return collision;
+}
+
+void Rizard::Load()
+{
+
+
+    sprite_ = Sprite("Rizard.png");
+    RenderingPath->AddSprite(&sprite_, -50);
+
+}
+
+void Rizard::Initialize()
+{
+
+    sprite_.params.siz = Math::Vector2(66.0f, 89.0f);
+    sprite_.params.pos = Math::Vector2(900.0f, -160.0f);
+    sprite_.params.enableDrawRect(Rectf(
+        0, 0, sprite_.params.siz.x, sprite_.params.siz.y
+    ));
+}
+
+void Rizard::Update()
+{
+
+    sprite_.params.pos.y += 400.0f * Time.deltaTime;
+    if (sprite_.params.pos.y >= 840.0f) {
+        sprite_.params.pos.x = Random::GetRandom(0.0f, 1280.0f - sprite_.params.siz.x);
+        //上のコードでランダムに出現位置を変更している
+        sprite_.params.pos.y = -160.0f;
+    }
+}

@@ -52,14 +52,15 @@ void Player::Update()
 {
     //¶‰E
 
-    if (InputSystem.Keyboard.isPressed.Right) {
+    if (InputSystem.Keyboard.isPressed.Right|| InputSystem.Keyboard.isPressed.D) {
         sprite_.params.pos.x += 300.0f * Time.deltaTime;
     }
-    if (InputSystem.Keyboard.isPressed.Left) {
+    if (InputSystem.Keyboard.isPressed.Left|| InputSystem.Keyboard.isPressed.A) {
         sprite_.params.pos.x += -300.0f * Time.deltaTime;
     }
     if (InputSystem.Keyboard.wasPressedThisFrame.Space) {
         effect_->Initialize(Math::Vector2(sprite_.params.pos.x, sprite_.params.pos.y));
+        se_.Stop();  
         se_. Play();
     }
     

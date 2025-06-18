@@ -35,6 +35,8 @@ void GameOverScene::Load()
     RenderingPath->AddFont(&point_, 1000);
     RenderingPath->AddFont(&text_, 1000);
 
+    result_ = Sound("result.wav", Sound::LoopCount::BGM);
+
     Scene::Load();
 }
 
@@ -79,6 +81,8 @@ void GameOverScene::Initialize()
     text_.params.posY = 180.0f;
     text_.params.size = 100;
     text_.params.color = Color(0, 0, 0);    // ê‘, óŒ, ê¬(0-255)
+
+    result_.Play();
 
 }
 
