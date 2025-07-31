@@ -19,7 +19,6 @@ void PlayerData::Load()
 void PlayerData::Initialize()
 {
     score_ = 0;
-    time_ = 30;
 
     // スコア見出し(1-UP)
     score_headline_.SetText(L"SCORE");
